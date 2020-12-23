@@ -12,7 +12,9 @@ setup(name='sailingcv',
 	package_data={},
 	entry_points={
 		'console_scripts': [
-			'sailingcv-test=sailingcv.main:start'
+			'sailingcv-test=sailingcv.build_model:test',
+			'sailingcv-download=sailingcv.build_model:download_dataset',
+			'sailingcv-create=sailingcv.build_model:create'
 		],
 	},
 	install_requires=open ('requirements.txt', 'r').read ().split ('\n')
